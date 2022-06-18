@@ -1,0 +1,17 @@
+FEATURES OF JIRA TICKET MANAGEMENT APP 
+--------------------------------------
+> add task by clicking on + symbol
+> select color ,highest priority task=pink and lowest priority task black
+>
+> 
+> Responsive CSS
+> lock the task (uneditable task)
+> Unique ID for different task
+> Filter apply
+    click on any color block
+> To remove task
+    click on cross then click on task then deselect cross to stop the deletion of task
+    
+> Task would remain saved even after refresh page
+> Double click on color block to bring all tasks on screen
+> 
