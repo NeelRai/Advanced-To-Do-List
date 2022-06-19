@@ -110,6 +110,7 @@ modalCont.addEventListener("keydown", function (e) {
 
   if (key == "Shift") {
     createTicket(modalPriorityColor, taskAreaCont.value); // this function will generate the ticket
+    // modal is hidden
     modalCont.style.display = "none";
     addFlag = false;
     taskAreaCont.value = "";
@@ -165,8 +166,6 @@ function handleRemoval(ticket , id) {
 
     //deleteElements.push(deletedElement)
 
-
-
     let strTicketArray = JSON.stringify(ticketsArr)
 
     localStorage.setItem('tickets' , strTicketArray)
@@ -187,6 +186,7 @@ function handleLock(ticket , id) {
 
   ticketLock.addEventListener("click", function (e) {
     let ticketIdx = getTicketIdx(id)
+    // if already locked then unlock else 
     if (ticketLock.classList.contains(lockClass)) {
       ticketLock.classList.remove(lockClass);
       ticketLock.classList.add(unlockClass);
@@ -200,9 +200,6 @@ function handleLock(ticket , id) {
 
     ticketsArr[ticketIdx].ticketTask = ticketTaskArea.innerText
     localStorage.setItem('tickets' , JSON.stringify(ticketsArr))
-
-
-
 
   });
 }

@@ -42,6 +42,7 @@ body {
   display: flex;
 }
 
+/* + x applying properties,these are children in in action btn container  */
 .action-btn-cont > * {
   display: flex;
   justify-content: center;
@@ -79,7 +80,8 @@ body {
 .toolbox-priority-cont > *:hover {
   background-color: #485460;
 }
-
+/* calc vh donw to center the div element */
+/* spaces needed for calc syntax */
 .modal-cont {
   height: 50vh;
   width: 45vw;
@@ -89,7 +91,8 @@ body {
   left: calc((100vw - 45vw) / 2);
   display: none;
 }
-
+/* border outline none ,these are by default present  */
+/* spellcheck disabled in html  */
 .textarea-cont {
   height: 100%;
   width: 75%;
