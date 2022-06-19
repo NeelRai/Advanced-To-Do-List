@@ -161,7 +161,8 @@ function handleRemoval(ticket , id) {
 
 
     // localStorgae removal of ticket
-
+    //start idx , o of elements to select after that
+    //idx is selected here
     let deletedElement = ticketsArr.splice(idx , 1)
 
     //deleteElements.push(deletedElement)
@@ -187,6 +188,9 @@ function handleLock(ticket , id) {
   ticketLock.addEventListener("click", function (e) {
     let ticketIdx = getTicketIdx(id)
     // if already locked then unlock else 
+
+    //contenteditable property of HTML
+    
     if (ticketLock.classList.contains(lockClass)) {
       ticketLock.classList.remove(lockClass);
       ticketLock.classList.add(unlockClass);
@@ -211,13 +215,13 @@ function handleColor(ticket , id) {
     let currentTicketColor = ticketColorBand.classList[1];
 
     let ticketIdx = getTicketIdx(id)
-
+    // color matching of note band using findindex 
     let currentTicketColoridx = colors.findIndex(function (color) {
       return currentTicketColor === color;
     });
-
+    // for next color
     currentTicketColoridx++;
-
+    // for returning to start color after black color/last color
     let newTicketColorIdx = currentTicketColoridx % colors.length;
     let newTicketColor = colors[newTicketColorIdx];
 
